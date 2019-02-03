@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+production: 
+  <<: *default
+  adapter: postgresql 
+  database: notejam_prod
+
+development:
+  <<: *default
+  adapter: postgresql 
+  database: notejam_dev
+
+test:
+  <<: *default
+  adapter: postgresql
+  database: notejam_test
